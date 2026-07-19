@@ -219,7 +219,7 @@ RESTORE_CONFIRM=YES ./scripts/restore.sh backups/student-care-20260719-120000.du
 cd backend
 python3.12 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 
 export ENVIRONMENT=development
 export SECRET_KEY=local-development-secret-key-at-least-32-characters
@@ -258,6 +258,7 @@ make check
 
 检查内容包括：
 
+- Ruff 静态检查与格式检查。
 - 后端 pytest 业务回归测试。
 - Python 源码编译检查。
 - Vue TypeScript 类型检查。
