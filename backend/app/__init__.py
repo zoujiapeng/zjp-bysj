@@ -1,0 +1,1 @@
+"""Student care backend application."""
